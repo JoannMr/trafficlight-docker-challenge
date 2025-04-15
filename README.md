@@ -44,6 +44,8 @@ Esta parte expone las 3 aplicaciones web en diferentes puertos:
 docker compose -f docker-compose.proxy.yml up --build -d
 ```
 
+✅ Este comando construye automáticamente las imágenes y lanza los contenedores.
+
 ### 🧼 Para detener:
 
 ```bash
@@ -62,6 +64,8 @@ En esta versión, Nginx actúa como balanceador de carga. Todas las apps están 
 docker compose -f docker-compose.loadbalancer.yml up --build -d
 ```
 
+✅ Este comando también construye automáticamente las imágenes y lanza los servicios.
+
 ### 🧼 Para detener:
 
 ```bash
@@ -76,9 +80,9 @@ Este repositorio incluye:
 
 - `Dockerfile` para cada app
 - Configuraciones de Nginx (proxy y balanceador)
-- 2 archivos `docker-compose` para levantar cada versión del reto
+- 2 archivos `docker-compose` que construyen y levantan automáticamente cada versión del reto
 
-La corrección se puede hacer ejecutando directamente los archivos:
+La corrección se puede hacer ejecutando directamente:
 
 ```bash
 docker compose -f docker-compose.proxy.yml up -d

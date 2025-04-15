@@ -2,19 +2,25 @@ version: '3'
 
 services:
   red-app:
-    image: trafficlight/red:v1.0
+    build:
+      context: ./red
+      dockerfile: Dockerfile
     container_name: red-app
     networks:
       traffic-light:
 
   yellow-app:
-    image: trafficlight/yellow:v1.0
+    build:
+      context: ./yellow
+      dockerfile: Dockerfile
     container_name: yellow-app
     networks:
       traffic-light:
 
   green-app:
-    image: trafficlight/green:v1.0
+    build:
+      context: ./green
+      dockerfile: Dockerfile
     container_name: green-app
     networks:
       traffic-light:
